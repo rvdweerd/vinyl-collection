@@ -1,15 +1,15 @@
 [
     {
-        "id": "album1",
-        "title": "Album Title 1",
-        "artist": "Artist 1",
-        "year": "1970",
-        "genre": "Rock",
-        "label": "Label 1",
-        "cover": "albums/gordon-go/gs.jpg",
-        "thumbnails": ["thumbnails/gs_thumb1.jpg"],
-        "highres": ["highres/gs_highres1.jpg"],
-        "info": "Information about Album 1"
+        "id": "gordon-go",
+        "title": "Go!",
+        "artist": "Dexter Gordon",
+        "year": "1962",
+        "genre": "Hard Bob",
+        "label": "Blue Note",
+        "cover": "albums/gordon-go/IMG_2320.JPG",
+        "thumbnails": ["albums/gordon-go/IMG_2320.JPG","albums/gordon-go/IMG_2321.JPG"],
+        "highres": ["albums/gordon-go/IMG_2320.JPG","albums/gordon-go/IMG_2321.JPG"],
+        "info": "Information about Go!"
     },
     {
         "id": "album2",
