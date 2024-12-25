@@ -122,6 +122,16 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative; /* Add this line */
+}
+
+.high-res-modal-content .close {
+    position: absolute; /* Add this line */
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
 }
 
 #highResImage {
