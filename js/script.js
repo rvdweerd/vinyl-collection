@@ -93,6 +93,21 @@ function closeModal(modalId) {
     }
 }
 
+// Add touch event listeners to close modal when touching outside the modal content on touch devices
+window.ontouchstart = function(event) {
+    const modal = document.getElementById('modal');
+    const highResModal = document.getElementById('highResModal');
+    if (event.target == highResModal) {
+        highResModal.style.display = 'none';
+        if (isMainModalOpen) {
+            modal.style.display = 'block';
+        }
+    } else if (event.target == modal) {
+        modal.style.display = 'none';
+        isMainModalOpen = false;
+    }
+}
+
 // Close modal when clicking outside the modal content
 window.onclick = function(event) {
     const modal = document.getElementById('modal');
