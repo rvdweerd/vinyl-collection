@@ -131,7 +131,8 @@ footer {
     position: relative; /* Add this line */
 }
 
-.high-res-modal-content .close {
+/*.high-res-modal-content*/ 
+.close {
     position: absolute; /* Add this line */
     top: 10px; /* Adjust as needed */
     right: 10px; /* Adjust as needed */
