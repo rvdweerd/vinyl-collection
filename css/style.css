@@ -112,6 +112,7 @@ footer {
 .thumbnails {
     display: flex;
     flex-wrap: wrap;
+    cursor: pointer;
 }
 
 .thumbnail {
