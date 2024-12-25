@@ -1,22 +1,56 @@
 let isMainModalOpen = false; // Track if the main modal is open
 
+// Fetch and display records
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('records.json')
+        .then(response => response.json())
+        .then(data => {
+            const collectionGrid = document.getElementById('collection-grid');
+            data.forEach(record => {
+                const recordDiv = document.createElement('div');
+                recordDiv.className = 'record';
+                recordDiv.setAttribute('onclick', 'openModal(this)');
+                recordDiv.setAttribute('data-title', record.title);
+                recordDiv.setAttribute('data-artist', record.artist);
+                recordDiv.setAttribute('data-year', record.year);
+                recordDiv.setAttribute('data-genre', record.genre);
+                recordDiv.setAttribute('data-label', record.label);
+                recordDiv.setAttribute('data-thumbnails', JSON.stringify(record.thumbnails));
+                recordDiv.setAttribute('data-highres', JSON.stringify(record.highres));
+                recordDiv.setAttribute('data-info', record.info);
+
+                recordDiv.innerHTML = `
+                    <img src="${record.cover}" alt="${record.title} Cover" class="album-cover">
+                    <div class="info">
+                        <h3 class="data-title">${record.title}</h3>
+                        <p><strong>Artist:</strong> <span class="data-artist">${record.artist}</span></p>
+                        <p><strong>Year:</strong> <span class="data-year">${record.year}</span></p>
+                        <p><strong>Genre:</strong> <span class="data-genre">${record.genre}</span></p>
+                        <p><strong>Record Label:</strong> <span class="data-label">${record.label}</span></p>
+                    </div>
+                `;
+                collectionGrid.appendChild(recordDiv);
+            });
+        })
+        .catch(error => console.error('Error fetching records:', error));
+});
+
 // Open modal function for album details
-function openModal(albumId) {
+function openModal(record) {
     const modal = document.getElementById('modal');
     const modalBody = document.getElementById('modal-body');
     modal.style.display = 'block';
     isMainModalOpen = true; // Set the flag to true
 
     // Get the data for the selected album
-    const albumData = document.getElementById(albumId);
-    const title = albumData.getAttribute('data-title');
-    const artist = albumData.getAttribute('data-artist');
-    const year = albumData.getAttribute('data-year');
-    const genre = albumData.getAttribute('data-genre');
-    const label = albumData.getAttribute('data-label');
-    const thumbnails = JSON.parse(albumData.getAttribute('data-thumbnails'));
-    const highres = JSON.parse(albumData.getAttribute('data-highres'));
-    const info = albumData.getAttribute('data-info');
+    const title = record.getAttribute('data-title');
+    const artist = record.getAttribute('data-artist');
+    const year = record.getAttribute('data-year');
+    const genre = record.getAttribute('data-genre');
+    const label = record.getAttribute('data-label');
+    const thumbnails = JSON.parse(record.getAttribute('data-thumbnails'));
+    const highres = JSON.parse(record.getAttribute('data-highres'));
+    const info = record.getAttribute('data-info');
 
     // Generate the content for the modal
     let content = `
@@ -98,11 +132,11 @@ function filterAlbums() {
     const records = document.getElementsByClassName('record');
 
     Array.from(records).forEach(record => {
-        const title = record.querySelector('h3').innerText.toLowerCase();
-        const artist = record.querySelector('p:nth-child(2)').innerText.toLowerCase();
-	const year = record.querySelector('p:nth-child(3)').innerText.toLowerCase();
-        const genre = record.querySelector('p:nth-child(4)').innerText.toLowerCase();
-	const label = record.querySelector('p:nth-child(5)').innerText.toLowerCase();
+        const title = record.getAttribute('data-title').toLowerCase();
+        const artist = record.getAttribute('data-artist').toLowerCase();
+        const year = record.getAttribute('data-year').toLowerCase();
+        const genre = record.getAttribute('data-genre').toLowerCase();
+        const label = record.getAttribute('data-label').toLowerCase();
 
         if (title.includes(filter) || artist.includes(filter) || year.includes(filter) || genre.includes(filter) || label.includes(filter)) {
             record.style.display = '';

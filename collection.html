@@ -20,69 +20,7 @@
         <!-- Search Bar -->
         <input type="text" id="searchInput" placeholder="Search for albums..." onkeyup="filterAlbums()">
         
-        <div id="collection-grid">
-            <div class="record" onclick="openModal('album1')">
-                <img src="albums/gordon-go/gs.jpg" alt="Album 1 Cover" class="album-cover">
-                <div class="info">
-                    <h3>Album Title 1</h3>
-                    <p><strong>Artist:</strong> Artist 1</p>
-                    <p><strong>Year:</strong> 1970</p>
-                    <p><strong>Genre:</strong> Rock</p>
-                    <p><strong>Record Label:</strong> Label 1</p>
-                </div>
-            </div>
-            <div class="record" onclick="openModal('album2')">
-                <img src="images/album2.jpg" alt="Album 2 Cover" class="album-cover">
-                <div class="info">
-                    <h3>Album Title 2</h3>
-                    <p><strong>Artist:</strong> Artist 2</p>
-                    <p><strong>Year:</strong> 1980</p>
-                    <p><strong>Genre:</strong> Pop</p>
-                    <p><strong>Record Label:</strong> Label 2</p>
-                </div>
-            </div>
-            <div class="record" onclick="openModal('album3')">
-                <img src="images/album3.jpg" alt="Album 3 Cover" class="album-cover">
-                <div class="info">
-                    <h3>Album Title 3</h3>
-                    <p><strong>Artist:</strong> Artist 3</p>
-                    <p><strong>Year:</strong> 1990</p>
-                    <p><strong>Genre:</strong> Jazz</p>
-                    <p><strong>Record Label:</strong> Label 3</p>
-                </div>
-            </div>
-            <div class="record" onclick="openModal('album4')">
-                <img src="images/album4.jpg" alt="Album 4 Cover" class="album-cover">
-                <div class="info">
-                    <h3>Album Title 4</h3>
-                    <p><strong>Artist:</strong> Artist 4</p>
-                    <p><strong>Year:</strong> 2000</p>
-                    <p><strong>Genre:</strong> Hip Hop</p>
-                    <p><strong>Record Label:</strong> Label 4</p>
-                </div>
-            </div>
-            <div class="record" onclick="openModal('album5')">
-                <img src="images/album5.jpg" alt="Album 5 Cover" class="album-cover">
-                <div class="info">
-                    <h3>Album Title 5</h3>
-                    <p><strong>Artist:</strong> Artist 5</p>
-                    <p><strong>Year:</strong> 2010</p>
-                    <p><strong>Genre:</strong> Electronic</p>
-                    <p><strong>Record Label:</strong> Label 5</p>
-                </div>
-            </div>
-            <!-- Add more records as needed -->
-        </div>
-
-        <!-- Data for modals -->
-        <div id="modalData" style="display: none;">
-            <div id="album1" data-title="Album Title 1" data-artist="Artist 1" data-year="1970" data-genre="Rock" data-label="Label 1" data-thumbnails='["thumbnails/gs_thumb1.jpg", "thumbnails/gs_thumb2.jpg", "thumbnails/gs_thumb3.jpg", "thumbnails/gs_thumb4.jpg"]' data-highres='["highres/gs_highres1.jpg", "highres/gs_highres2.jpg", "highres/gs_highres3.jpg", "highres/gs_highres4.jpg"]' data-info="General information about the album."></div>
-            <div id="album2" data-title="Album Title 2" data-artist="Artist 2" data-year="1980" data-genre="Pop" data-label="Label 2" data-thumbnails='["thumbnails/album2_thumb1.jpg", "thumbnails/album2_thumb2.jpg", "thumbnails/album2_thumb3.jpg", "thumbnails/album2_thumb4.jpg"]' data-highres='["highres/album2_highres1.jpg", "highres/album2_highres2.jpg", "highres/album2_highres3.jpg", "highres/album2_highres4.jpg"]' data-info="General information about the album."></div>
-            <div id="album3" data-title="Album Title 3" data-artist="Artist 3" data-year="1990" data-genre="Jazz" data-label="Label 3" data-thumbnails='["thumbnails/album3_thumb1.jpg", "thumbnails/album3_thumb2.jpg", "thumbnails/album3_thumb3.jpg", "thumbnails/album3_thumb4.jpg"]' data-highres='["highres/album3_highres1.jpg", "highres/album3_highres2.jpg", "highres/album3_highres3.jpg", "highres/album3_highres4.jpg"]' data-info="General information about the album."></div>
-            <div id="album4" data-title="Album Title 4" data-artist="Artist 4" data-year="2000" data-genre="Hip Hop" data-label="Label 4" data-thumbnails='["thumbnails/album4_thumb1.jpg", "thumbnails/album4_thumb2.jpg", "thumbnails/album4_thumb3.jpg", "thumbnails/album4_thumb4.jpg"]' data-highres='["highres/album4_highres1.jpg", "highres/album4_highres2.jpg", "highres/album4_highres3.jpg", "highres/album4_highres4.jpg"]' data-info="General information about the album."></div>
-            <div id="album5" data-title="Album Title 5" data-artist="Artist 5" data-year="2010" data-genre="Electronic" data-label="Label 5" data-thumbnails='["thumbnails/album5_thumb1.jpg", "thumbnails/album5_thumb2.jpg", "thumbnails/album5_thumb3.jpg", "thumbnails/album5_thumb4.jpg"]' data-highres='["highres/album5_highres1.jpg", "highres/album5_highres2.jpg", "highres/album5_highres3.jpg", "highres/album5_highres4.jpg"]' data-info="General information about the album."></div>
-            <!-- Add more data as needed -->
-        </div>
+        <div id="collection-grid"></div>
     </main>
     <footer>
         <p>&copy; 2024 Vinyl Collection</p>

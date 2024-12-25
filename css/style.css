@@ -121,7 +121,7 @@ footer {
 
 /* High-Resolution Image Modal Styles */
 .high-res-modal-content {
-    width: auto;
+    width: 80vh; /*auto;*/
     height: 80vh; /* Adjust height based on screen size */
     background-color: transparent;
     border: none;
