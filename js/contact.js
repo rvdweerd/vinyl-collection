@@ -6,7 +6,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const formData = new FormData(form);
 
     // Replace 'your-formspree-endpoint' with your actual Formspree endpoint
-    fetch('https://formspree.io/f/{your-formspree-endpoint}', {
+    fetch('https://formspree.io/f/xkggjlyo', {
         method: 'POST',
         body: formData,
         headers: {
