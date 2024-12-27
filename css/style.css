@@ -94,22 +94,22 @@ footer {
     position: absolute;
     top: 10px;
     right: 10px;
-    color: #fff; /* Change the color to white */
+    color: #aaa; /* Change the color to white */
     float: right;
-    font-size: 32px; /* Increase the font size */
+    font-size: 28px; /* Increase the font size */
     font-weight: bold;
-    background-color: #f00; /* Add a background color */
-    border: 2px solid #fff; /* Add a border */
-    border-radius: 50%; /* Make it circular */
-    padding: 5px 10px; /* Add some padding */
+    background-color: transparent; /* Add a background color */
+    border: none /*2px solid #fff; /* Add a border */
+    /*border-radius: 50%; /* Make it circular */
+    padding: 0/*5px 10px; /* Add some padding */
     cursor: pointer; /* Change the cursor to pointer */
 }
 
 .close:hover,
 .close:focus {
-    color: #fff; /* Keep the color white on hover/focus */
-    background-color: #c00; /* Darken the background color on hover/focus */
-    border-color: #fff; /* Keep the border color white on hover/focus */
+    color: #000; /* Keep the color white on hover/focus */
+    /*background-color: #c00; /* Darken the background color on hover/focus */
+    /*border-color: #fff; /* Keep the border color white on hover/focus */
     text-decoration: none;
     cursor: pointer;
 }
